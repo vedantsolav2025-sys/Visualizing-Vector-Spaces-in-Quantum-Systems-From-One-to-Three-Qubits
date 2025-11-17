@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Qubit Visualization Toolkit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script src="OrbitControls.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔬 Multi-Qubit Visualization Toolkit</h1>
+            <p class="subtitle">Interactive Quantum State Visualization</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Qubit Selection -->
+            <div class="control-panel">
+                <div class="section">
+                    <h2>Select Number of Qubits</h2>
+                    <div class="qubit-selector">
+                        <button class="qubit-btn" data-qubits="1">1 Qubit</button>
+                        <button class="qubit-btn" data-qubits="2">2 Qubits</button>
+                        <button class="qubit-btn" data-qubits="3">3 Qubits</button>
+                    </div>
+                </div>
+
+                <!-- State Input -->
+                <div class="section" id="state-input-section">
+                    <h2>State Vector Input</h2>
+                    <div id="state-input-container">
+                        <!-- Dynamic input fields will be inserted here -->
+                    </div>
+                    <button id="apply-state-btn" class="action-btn">Apply State</button>
+                </div>
+
+                <!-- Operations Panel -->
+                <div class="section" id="operations-section">
+                    <h2>Operations</h2>
+                    <div id="operations-container">
+                        <!-- Dynamic operations will be inserted here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visualization Area -->
+            <div class="visualization-area">
+                <div id="visualization-container">
+                    <div class="placeholder">
+                        <p>Select number of qubits to begin</p>
+                    </div>
+                </div>
+                
+                <!-- Information Display -->
+                <div class="info-panel" id="info-panel">
+                    <h3>State Information</h3>
+                    <div id="state-info"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="quantum.js"></script>
+    <script src="visualization.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
